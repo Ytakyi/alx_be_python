@@ -1,12 +1,12 @@
 # Variables naming
 
 
-user_monthly_income = float(input("Enter your monthly income: "))
-user_total_monthly_expenses = float(input("Enter your total monthly expenses: "))
+monthly_income = float(input("Enter your monthly income: "))
+monthly_expenses = float(input("Enter your total monthly expenses: "))
 
 # calculate monthly savings
 
-monthly_savings = user_monthly_income - user_total_monthly_expenses
+monthly_savings = monthly_income - monthly_expenses
 
 # calculate projectes savings after one year
 
