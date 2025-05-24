@@ -10,7 +10,7 @@ monthly_savings = user_monthly_income - user_total_monthly_expenses
 
 # calculate projectes savings after one year
 
-projected_savings = ((monthly_savings * 12) + (monthly_savings * 12 * interest_rate))
+projected_savings = monthly_savings * 12 + (monthly_savings * 12 * interest_rate)
 
 # output of results
 
