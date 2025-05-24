@@ -1,8 +1,8 @@
 # Variables naming
 
 interest_rate = 0.05
-user_monthly_income = int(input("Enter your monthly income: "))
-user_total_monthly_expenses = int(input("Enter your total monthly expenses: "))
+user_monthly_income = float(input("Enter your monthly income: "))
+user_total_monthly_expenses = float(input("Enter your total monthly expenses: "))
 
 # calculate monthly savings
 
