@@ -1,28 +1,26 @@
 
-# Step 1: Prompt user for task details
+ # task_reminder.py
 
-Task = input("Enter your task description: ")
-priority = input("Enter task priority level (high/medium/low): ")
-Time_bound = input("Is the task time-bound? (yes/no): ")
+# Step 1: Prompt for user input
+task = input("Enter your task description: ")
+priority = input("Set the task's priority (high/medium/low): ").lower()
+time_bound = input("Is the task time-bound? (yes/no): ").lower()
 
-# Step 2: Process the task based on priority
-
+# Step 2: Process task based on priority using match-case
 match priority:
-    case 'high':
-        if Time_bound == "yes"
-            message = f"Task: '{Task}' is a HIGH priority task and needs attention today."
-        else:
-            message = f"Task: '{Task}' is a HIGH priority task"
-    case 'medium':
-        if Time_bound == "yes":
-            message = " It requires immediate attention today!"
-        else:
-            message = f"Task: '{Task}' is a MEDIUM priority task."
-    case 'low':
-        message = f"Task: '{Task}' is a LOW priority task."
+    case "high":
+        message = f"Task: '{task}' is a HIGH priority task."
+    case "medium":
+        message = f"Task: '{task}' is a MEDIUM priority task."
+    case "low":
+        message = f"Task: '{task}' is a LOW priority task."
     case _:
-        message = f"Task: '{Task}' has an UNKNOWN priority."
+        message = f"Task: '{task}' has an UNKNOWN priority."
 
+# Step 3: Add extra message if task is time-bound
+if time_bound == "yes":
+    message += " It requires immediate attention today!"
 
-# Step 4: Print reminder
+# Step 4: Print final customized reminder
 print(message)
+
