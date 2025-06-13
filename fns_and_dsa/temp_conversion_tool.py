@@ -1,18 +1,21 @@
- # Global conversion factors
+ # Define global conversion factors
+global FAHRENHEIT_TO_CELSIUS_FACTOR
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
+
+global CELSIUS_TO_FAHRENHEIT_FACTOR
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
-# Function to convert Fahrenheit to Celsius
+# Conversion function: Fahrenheit to Celsius
 def convert_to_celsius(fahrenheit):
     global FAHRENHEIT_TO_CELSIUS_FACTOR
     return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
-# Function to convert Celsius to Fahrenheit
+# Conversion function: Celsius to Fahrenheit
 def convert_to_fahrenheit(celsius):
     global CELSIUS_TO_FAHRENHEIT_FACTOR
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
-# Main function to handle user input and call the right conversion
+# Main function for user interaction
 def main():
     try:
         temp = float(input("Enter the temperature: "))
@@ -32,7 +35,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
- 
-
-
