@@ -2,24 +2,24 @@ from datetime import datetime, timedelta
 
 def display_current_datetime():
     current_date = datetime.now()
-    formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
-    return formatted_date  # ✅ Return instead of just print
+    return current_date.strftime("%Y-%m-%d %H:%M:%S")  # ✅ Return formatted date
 
-def calculate_future_date():
-    try:
-        days_to_add = int(input("Enter the number of days to add: "))
-        future_date = datetime.now() + timedelta(days=days_to_add)
-        formatted_future = future_date.strftime("%Y-%m-%d")
-        return formatted_future  # ✅ Return formatted date
-    except ValueError:
-        return "Invalid input. Please enter a valid integer."
+def calculate_future_date(days_to_add):
+    future_date = datetime.now() + timedelta(days=days_to_add)
+    return future_date.strftime("%Y-%m-%d")  # ✅ Return formatted future date
 
 def main():
+    # Part 1: Display current date and time
     current = display_current_datetime()
     print("Current date and time:", current)
 
-    future = calculate_future_date()
-    print("Future date:", future)
+    # Part 2: Calculate future date
+    try:
+        days = int(input("Enter the number of days to add: "))
+        future = calculate_future_date(days)
+        print("Future date:", future)
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
 
 if __name__ == "__main__":
     main()
